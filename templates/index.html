@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to SmartInventory: Simplify Your Inventory Management</title>
+  <style>
+    /* Add your CSS styles here */
+    /* Example styles for demonstration purposes */
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    section {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .options {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .options li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .options a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .options a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* Add your animation styles here */
+    /* Example animations for demonstration purposes */
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation ease-in 1s forwards;
+    }
+    
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .slide-in {
+      transform: translateX(-100%);
+      animation: slideInAnimation ease-in 1s forwards;
+    }
+    
+    @keyframes slideInAnimation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    
+    /* Add your custom CSS styling here */
+    /* Example custom CSS for demonstration purposes */
+    
+    .customer-section {
+      background-color: #fff3d8;
+    }
+    
+    .product-section {
+      background-color: #e7f2fd;
+    }
+    
+    .orders-section {
+      background-color: #e8f7ef;
+    }
+    
+    .supplier-section {
+      background-color: #fde7e9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to SmartInventory: Simplify Your Inventory Management</h1>
+  </header>
+  
+  <section class="customer-section fade-in">
+    <h2>Customer Section</h2>
+    <ul class="options">
+      <li><a href="/add-customer">Add Customer</a></li>
+      <li><a href="/update-customer">Update Customer</a></li>
+      <li><a href="#">Delete Customer</a></li>
+      <li><a href="/show-customers">Show Customers</a></li>
+    </ul>
+  </section>
+  
+  <section class="product-section slide-in">
+    <h2>Product Section</h2>
+    <ul class="options">
+      <li><a href="/add-product">Add Product</a></li>
+      <li><a href="/update-product">Update Product</a></li>
+      <li><a href="#">Delete Product</a></li>
+      <li><a href="/show-products">Show Products</a></li>
+    </ul>
+  </section>
+  
+  <section class="orders-section fade-in">
+    <h2>Orders Section</h2>
+    <ul class="options">
+      <li><a href="/add-order">Add Order</a></li>
+      <li><a href="/update-order">Update Order</a></li>
+      <li><a href="#">Delete Order</a></li>
+      <li><a href="/show-orders">Show Orders</a></li>
+    </ul>
+  </section>
+  
+  <section class="supplier-section slide-in">
+    <h2>Supplier Section</h2>
+    <ul class="options">
+      <li><a href="/add-supplier">Add Supplier</a></li>
+      <li><a href="/update-supplier">Update Supplier</a></li>
+      <li><a href="/delete-supplier">Delete Supplier</a></li>
+      <li><a href="/show-suppliers">Show Suppliers</a></li>
+    </ul>
+  </section>
+</body>
+</html>

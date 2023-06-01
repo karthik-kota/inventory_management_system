@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Order</title>
+    <style>
+        /* CSS styling for the form */
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Order</h1>
+        <form method="POST" action="/update-order">
+            <div class="form-group">
+                <label for="orderid">Order ID:</label>
+                <input type="text" id="orderid" name="orderid" required>
+            </div>
+            <div class="form-group">
+                <label for="change">Change:</label>
+                <select id="change" name="change">
+                    <option value="product_id">Product ID</option>
+                    <option value="customer_id">Customer ID</option>
+                    <option value="customer_email">Customer Email</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="newvalue">New Value:</label>
+                <input type="text" id="newvalue" name="newvalue" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

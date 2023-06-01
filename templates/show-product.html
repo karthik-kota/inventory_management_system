@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flask Web App - Show Products</title>
+  <style>
+    /* CSS Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .table-container {
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 10px;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    
+    th {
+        background-color: #FFA500;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideIn {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+    
+    /* Animation Classes */
+    .fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    .slide-in {
+        animation: slideIn 1s ease-in-out;
+    }
+</style>
+</head>
+<body>
+  <div class="container fade-in">
+    <h1 class="title">Products List</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Stock</th>
+          <th>Supplier ID</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in data %}
+        <tr>
+          <td>{{ product.product_id }}</td>
+          <td>{{ product.product_name }}</td>
+          <td>{{ product.stock }}</td>
+          <td>{{ product.supplier_id }}</td>
+          <td>{{ product.Price }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

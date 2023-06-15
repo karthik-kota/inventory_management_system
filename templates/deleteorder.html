@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Orders</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .order-list {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .delete-form {
+      margin-top: 20px;
+    }
+
+    .delete-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .delete-form input[type="text"] {
+      padding: 5px;
+      width: 300px;
+    }
+
+    .delete-form input[type="submit"] {
+      background-color: #333;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Delete Orders</h1>
+
+  <div class="order-list">
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>Product ID</th>
+        <th>Customer ID</th>
+        <th>Customer Email</th>
+      </tr>
+      {% for order in data %}
+      <tr>
+        <td>{{ order['order_id'] }}</td>
+        <td>{{ order['product_id'] }}</td>
+        <td>{{ order['customer_id'] }}</td>
+        <td>{{ order['customer_email'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <form class="delete-form" action="/delete-orders" method="post">
+      <label for="orderid">Order ID:</label>
+      <input type="text" id="orderid" name="orderid" placeholder="Enter Order ID">
+
+      <input type="submit" value="Delete">
+    </form>
+  </div>
+</body>
+</html>

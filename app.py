@@ -71,8 +71,8 @@ def product_show():
         product['product_id'] = i[0]
         product['product_name'] = i[1]
         product['stock'] = i[2]
-        #product['supplier_id'] = i[3]
-        product['Price'] = i[3]
+        product['supplier_id'] = i[3]
+        product['Price'] = i[4]
         data.append(product)
     print(data)
     return render_template('show-product.html',data = data)

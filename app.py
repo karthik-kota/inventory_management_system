@@ -1,4 +1,3 @@
-import pyodbc
 import sqlite3
 from flask import Flask, jsonify, request, render_template
 #conn = sqlite3.connect('ims.db')
